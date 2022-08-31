@@ -4,25 +4,49 @@ import React from 'react';
 export default function Files(props) {
   return(
     <div className="bg-light mt-2 px-1">
-      <ul className="nav ">
-        <li className="nav-item">
-          <a className="nav-link active text-secondary hover-text-black" aria-current="page" href="#">
-            Completado
-          </a>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link text-secondary" href="#">
-            Error
-          </a>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link text-secondary" href="#">
-            Proceso
-          </a>
-        </li>
-      </ul>
+      <div className="nav nav-tabs" id="nav-tab" role="tablist">
+        <ul className="nav">
+          <li className="nav-item">
+            <a 
+            className="nav-link active text-secondary hover-text-black" 
+            id="completed-tab" 
+            data-bs-toggle="tab" data-bs--target="#nav-completed" 
+            aria-current="page" aria-controls="nav-completed" aria-selected="true" 
+            href="#" 
+            role="tab">
+              Completado
+            </a>
+          </li>
+          <li className="nav-item">
+            <a 
+            className="nav-link text-secondary" 
+            id="error-tab" 
+            data-bs-toggle="tab" data-bs--target="#nav-error" 
+            aria-selected="false" aria-controls="nav-error" 
+            href="#" 
+            role="tab">
+              Error
+            </a>
+          </li>
+          <li className="nav-item">
+            <a 
+            className="nav-link text-secondary" 
+            id="process-tab" 
+            data-bs-toggle="tab" data-bs--target="#nav-process" 
+            aria-selected="false" aria-controls="nav-process" 
+            href="#" 
+            role="tab">
+              Proceso
+            </a>
+          </li>
+        </ul>
+      </div>
 
-      <div className="table-responsive ">
+      <div 
+      className="tab-pane table-responsive fade show active" 
+      id="nav-completed" 
+      aria-labelledby="completed-tab" 
+      role="tabpanel">
         <table className="table table-sm">
           <thead className="table-success table-hover text-black-50 fs-6 fw-light">
           <tr>
@@ -62,6 +86,22 @@ export default function Files(props) {
             </tr>
           </tbody>
         </table>
+      </div>
+
+      <div 
+      className="tab-pane fade" 
+      id="nav-error" 
+      aria-labelledby="error-tab" 
+      role="tabpanel">
+        No error to show
+      </div>
+
+      <div 
+      className="tab-pane fade" 
+      id="nav-process" 
+      aria-labelledby="process-tab" 
+      role="tabpanel">
+        All done
       </div>
     </div>
   )
