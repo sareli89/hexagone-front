@@ -1,3 +1,7 @@
+import {
+  Files,
+} from '../src/components/index.js'
+
 function App() {
   return (
     <div className="container-fluid mt-2"> 
@@ -18,7 +22,7 @@ function App() {
           </div>
 
           <div className="bg-info  h-auto">
-            kldkd
+            <Files/>
           </div>
 
         </div>
