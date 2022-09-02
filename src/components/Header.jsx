@@ -30,13 +30,13 @@ export default function Header () {
         <div class="p-2">
           <div class="dropdown">
             <button 
-            class="btn btn-link dropdown-toggle text-decoration-none" 
+            class="btn btn-link dropdown-toggle text-decoration-none text-dark" 
             type="button" 
             data-bs-toggle="dropdown" 
             aria-expanded="false">
                 Sara Reveles 
                 <span 
-                class="position-absolute p-1 mt-3 top-50 start-0 ms-5 translate-middle badge text-muted">
+                class="position-absolute p-1 mt-3 top-50 start-0 ms-5 translate-middle badge text-black-50">
                   Active
                 </span>
             </button>
