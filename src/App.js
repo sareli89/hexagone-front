@@ -1,6 +1,8 @@
 import React from "react";
-import { Header } from "./components";
-
+import { 
+  Favourites, 
+  Header 
+} from "./components";
 
 function App() {
   return (
@@ -17,8 +19,8 @@ function App() {
             <Header/>
           </div>
             
-          <div className="bg-danger  h-auto">
-            ;klmdkdsk;
+          <div className=" h-auto">
+            <Favourites/>
           </div>
 
           <div className="bg-info  h-auto">
