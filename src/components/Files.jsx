@@ -1,5 +1,15 @@
-import React from 'react';
+import React from "react";
 
+import {
+  FileSegment
+} from "../components/index"
+
+import { 
+  BiBookmark,
+  BiDotsVerticalRounded,
+  BiMoveVertical,
+  BiShowAlt
+} from "react-icons/bi";
 
 export default function Files(props) {
   return(
@@ -14,7 +24,7 @@ export default function Files(props) {
             aria-current="page" aria-controls="nav-completed" aria-selected="true" 
             href="#" 
             role="tab">
-              Completado
+              Completado 
             </a>
           </li>
           <li className="nav-item">
@@ -49,22 +59,24 @@ export default function Files(props) {
       role="tabpanel">
         <table className="table table-sm">
           <thead className="table-success table-hover text-black-50 fs-6 fw-light">
-          <tr>
-            <th scope="col"></th>
-            <th scope="col">Nombre del archivo</th>
-            <th scope="col">Match rate</th>
-            <th scope="col">Fecha de subida</th>
-            <th scope="col">Fecha de actualizacion</th>
-            <th scope="col"></th>
-            <th scope="col"></th>
-          </tr>
+            <tr>
+              <th scope="col"></th>
+              <th scope="col">Nombre del archivo <BiMoveVertical/></th>
+              <th scope="col">Match rate <BiMoveVertical/></th>
+              <th scope="col">Fecha de subida <BiMoveVertical/></th>
+              <th scope="col">Fecha de actualizacion <BiMoveVertical/></th>
+              <th scope="col"></th>
+              <th scope="col"></th>
+            </tr>
           </thead>
           <tbody clasName="table-primary table-group-divider">
             <tr>
               <td scope="row">
-                <div className="bg-secondary mt-3">
-                  S
-                </div>
+                <button 
+                type="button" 
+                className="btn btn-link">
+                  <BiBookmark/>
+                </button>
               </td>
               <td className="">
                 <p className="p-0 lh-1"> doc 1 </p>
@@ -74,18 +86,51 @@ export default function Files(props) {
               <td>23/02/2022</td>
               <td >23/02/2022</td>
               <td scope="row">
-                <div className="bg-secondary mt-3">
-                  E
-                </div>
+                <button type="button" class="btn btn-light">
+                  <BiShowAlt/>
+                </button>
               </td>
               <td scope="row">
-                <div className="bg-secondary mt-3">
-                  D
-                </div>
+              <button type="button" class="btn btn-light">
+                  <BiDotsVerticalRounded/>
+                </button>
               </td>
             </tr>
-          </tbody>
+            
+            <tr>
+              <td scope="row">
+                <button 
+                type="button" 
+                className="btn btn-link">
+                  <BiBookmark/>
+                </button>
+              </td>
+              <td className="">
+                <p className="p-0 lh-1"> doc 1 </p>
+                <span className="fw-lighter">hola que hace</span>
+              </td>
+              <td>23%</td>
+              <td>23/02/2022</td>
+              <td >23/02/2022</td>
+              <td scope="row">
+                <button type="button" class="btn btn-light">
+                  <BiShowAlt/>
+                </button>
+              </td>
+              <td scope="row">
+              <button type="button" class="btn btn-light">
+                  <BiDotsVerticalRounded/>
+                </button>
+              </td>
+            </tr>
+            
+            
+          </tbody> 
         </table>
+        
+      </div>
+      <div>
+        <FileSegment/>
       </div>
 
       <div 
