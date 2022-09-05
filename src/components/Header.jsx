@@ -1,14 +1,5 @@
 import React from "react";
 
-import {
-  s
-} from "../components/index"
-
-import { 
-  BiChevronDown,
-  BiStar
-} from "react-icons/bi";
-
 import { 
   FcElectricity 
 } from "react-icons/fc";

@@ -1,9 +1,11 @@
 import React from "react";
-import { 
+
+import {
+  Favourites, 
+  Files,
   Header,
   SideNavbar
-} from "./components";
-
+} from '../src/components/index'
 
 function App() {
   return (
@@ -22,12 +24,12 @@ function App() {
             <Header/>
           </div>
             
-          <div className="bg-danger  h-auto">
-            ;klmdkdsk;
+          <div className=" h-auto">
+            <Favourites/>
           </div>
 
           <div className="bg-info  h-auto">
-            kldkd
+            <Files/>
           </div>
 
         </div>
