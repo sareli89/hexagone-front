@@ -1,10 +1,15 @@
+import React from "react";
+
 import {
   Files,
-} from '../src/components/index.js'
+  Header,
+} from '../src/components/index'
+
+
 
 function App() {
   return (
-    <div className="container-fluid mt-2"> 
+    <div className="container-fluid mt-2 bg-light"> 
       <div className="row">
         <div className="col-3">
           <div className="bg-warning  h-100">
@@ -14,7 +19,7 @@ function App() {
 
         <div className="col-9">
           <div className="bg-secondary  h-auto-">
-            kndknfdn
+            <Header/>
           </div>
             
           <div className="bg-danger  h-auto">
