@@ -1,8 +1,12 @@
 import React from "react";
-import { 
+
+import {
   Favourites, 
-  Header 
-} from "./components";
+  Files,
+  Header,
+} from '../src/components/index'
+
+
 
 function App() {
   return (
@@ -24,7 +28,7 @@ function App() {
           </div>
 
           <div className="bg-info  h-auto">
-            kldkd
+            <Files/>
           </div>
 
         </div>
