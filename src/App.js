@@ -4,19 +4,20 @@ import {
   Favourites, 
   Files,
   Header,
+  SideNavbar
 } from '../src/components/index'
-
-
 
 function App() {
   return (
     <div className="container-fluid mt-2 bg-light"> 
       <div className="row">
         <div className="col-3">
-          <div className="bg-warning  h-100">
+          <SideNavbar/>
+          {/* <div className="bg-warning  h-100">
             nsdjnjd
-          </div>
+          </div> */}
         </div>
+        
 
         <div className="col-9">
           <div className="bg-secondary  h-auto-">
