@@ -20,7 +20,7 @@ export default function Favourites () {
       <div className="d-flex justify-content-end mt-3">
         <button 
         type="button" 
-        className="btn btn-info btn-sm text-uppercase gap-2 col-6 mx-auto me-2 text-white fw-bold">
+        className="btn btn-info btn-sm cursor-pointer text-uppercase gap-2 col-6 mx-auto me-2 text-white fw-bold">
           nuevo segmento
         </button>
         <input 
@@ -50,11 +50,11 @@ export default function Favourites () {
                     <td scope="row">
                       <button 
                       type="button" 
-                      className="btn btn-link bg-">
+                      className="btn btn-link">
                         <BiBookmark/>
                       </button>
                     </td>
-                    <td className="">
+                    <td className="cursor-pointer">
                       <p className=""> {favourite.fileName} 
                         <br /> 
                         <span className="fw-lighter">{favourite.fileDetail}</span> 
@@ -63,7 +63,7 @@ export default function Favourites () {
                     <td>{favourite.matchRate}</td>
                     <td>{favourite.uploadAt}</td>
                     <td>{favourite.updatedAt}</td>
-                    <td className="ps-2">
+                    <td className="ps-2 position-relative">
                       <div className="bg-success me-1 p-1 mt-2 position-absolute rounded-circle"></div>
                       <input type="radio" className="me-2"/>
                       {/* <span 
@@ -77,7 +77,7 @@ export default function Favourites () {
                       </button>
                     </td>
                     <td scope="row">
-                    <button type="button" class="btn btn-light">
+                      <button type="button" class="btn btn-light">
                         <BiDotsVerticalRounded/>
                       </button>
                     </td>

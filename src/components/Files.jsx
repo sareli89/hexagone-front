@@ -85,7 +85,7 @@ export default function Files(props) {
                       </button>
                     </td>
                     <td className="">
-                      <p className=" "> {item.fileName}  
+                      <p className=""> {item.fileName}  
                       <br /> 
                       <span className="fw-lighter"> {item.fileDetail} </span></p>
                     </td>
