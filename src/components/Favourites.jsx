@@ -6,10 +6,11 @@ import {
   BiShowAlt
 } from "react-icons/bi";
 
-import { AiOutlineSearch } from "react-icons/ai";
-
+import Items from "../files.json"
 
 export default function Favourites () {
+  const favourites = Items.filter(item => item.isFavourite === true);
+  
   return (
     <div>
     <div className="d-flex justify-content-between mb-4">
@@ -35,81 +36,58 @@ export default function Favourites () {
       Favoritos  
     </f4>
     <span className="fs-6 text text-secondary text-opacity-75">Puedes tener un máximo de 3 items en esta lista.</span>
+    <div 
+      className="tab-pane table-responsive fade show active" 
+      id="nav-completed" 
+      aria-labelledby="completed-tab" 
+      role="tabpanel">
     <table className="table table-responsive table-sm container bg-white shadow-sm mb-1 bg-body">
           <tbody clasName="table-primary table-group-divider">
-            <tr>
-              <td scope="row">
-                <button 
-                type="button" 
-                className="btn btn-link">
-                  <BiBookmark/>
-                </button>
-              </td>
-              <td className="">
-                <p className="p-0 lh-1"> doc 1 </p>
-                <span className="fw-lighter">hola que hace</span>
-              </td>
-              <td>23%</td>
-              <td>23/02/2022</td>
-              <td>23/02/2022</td>
-              <td className="ps-2">
-                <div className="bg-success me-1 p-1 mt-2 position-absolute rounded-circle"></div>
-                <input type="radio" className="me-2"/>
-                {/* <span 
-                className="position-absolute p-1 mt-3 top-30  translate-middle badge border border-light rounded-circle bg-danger ">
-                <span className="visually-hidden">isCompleted</span></span> */}
-                  Completado
-              </td>
-              <td scope="row">
-                <button type="button" class="btn btn-light">
-                  <BiShowAlt/>
-                </button>
-              </td>
-              <td scope="row">
-              <button type="button" class="btn btn-light">
-                  <BiDotsVerticalRounded/>
-                </button>
-              </td>
-            </tr>
-            
-            <tr>
-              <td scope="row">
-                <button 
-                type="button" 
-                className="btn btn-link">
-                  <BiBookmark/>
-                </button>
-              </td>
-              <td className="">
-                <p className="p-0 lh-1"> doc 1 </p>
-                <span className="fw-lighter">hola que hace</span>
-              </td>
-              <td>23%</td>
-              <td>23/02/2022</td>
-              <td >23/02/2022</td>
-              <td className="ps-2">
-                <div className="bg-success me-1 p-1 mt-2 position-absolute rounded-circle"></div>
-                <input type="radio" className="me-2"/>
-                {/* <span 
-                className="position-absolute p-1 mt-3 top-30  translate-middle badge border border-light rounded-circle bg-danger ">
-                <span className="visually-hidden">isCompleted</span></span> */}
-                  Completado
-              </td>
-              <td scope="row">
-                <button type="button" class="btn btn-light">
-                  <BiShowAlt/>
-                </button>
-              </td>
-              <td scope="row">
-              <button type="button" class="btn btn-light">
-                  <BiDotsVerticalRounded/>
-                </button>
-              </td>
-            </tr>
-            
-            
+            {
+              favourites.map (favourite =>{
+                return(
+                  <tr>
+                    <td scope="row">
+                      <button 
+                      type="button" 
+                      className="btn btn-link bg-">
+                        <BiBookmark/>
+                      </button>
+                    </td>
+                    <td className="">
+                      <p className=""> {favourite.fileName} 
+                        <br /> 
+                        <span className="fw-lighter">{favourite.fileDetail}</span> 
+                      </p>
+                    </td>
+                    <td>{favourite.matchRate}</td>
+                    <td>{favourite.uploadAt}</td>
+                    <td>{favourite.updatedAt}</td>
+                    <td className="ps-2">
+                      <div className="bg-success me-1 p-1 mt-2 position-absolute rounded-circle"></div>
+                      <input type="radio" className="me-2"/>
+                      {/* <span 
+                      className="position-absolute p-1 mt-3 top-30  translate-middle badge border border-light rounded-circle bg-danger ">
+                      <span className="visually-hidden">isCompleted</span></span> */}
+                        Completado
+                    </td>
+                    <td scope="row">
+                      <button type="button" class="btn btn-light">
+                        <BiShowAlt/>
+                      </button>
+                    </td>
+                    <td scope="row">
+                    <button type="button" class="btn btn-light">
+                        <BiDotsVerticalRounded/>
+                      </button>
+                    </td>
+                  </tr>
+                )
+              })
+            }   
           </tbody> 
       </table>
+      </div>
     </div>
   )
 }
