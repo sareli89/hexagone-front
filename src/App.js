@@ -1,6 +1,7 @@
 import React from "react";
 
 import {
+  Favourites, 
   Files,
   Header,
 } from '../src/components/index'
@@ -22,8 +23,8 @@ function App() {
             <Header/>
           </div>
             
-          <div className="bg-danger  h-auto">
-            ;klmdkdsk;
+          <div className=" h-auto">
+            <Favourites/>
           </div>
 
           <div className="bg-info  h-auto">

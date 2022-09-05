@@ -71,43 +71,43 @@ export default function Files(props) {
               <th scope="col"></th>
             </tr>
           </thead>
-
-          {
-            Items.map (item => {
-              return(
-                <tr>
-                  <td scope="row">
-                    <button 
-                    type="button" 
-                    className="btn btn-link">
-                      <BiBookmark/>
-                    </button>
-                  </td>
-                  <td className="">
-                    <p className="p-1 lh-1"> {item.fileName}  
-                    <br /> 
-                    <span className="fw-lighter"> {item.fileDetail} </span></p>
-                  </td>
-                  <td>{item.matchRate}</td>
-                  <td>{item.uploadAt}</td>
-                  <td >{item.updatedAt}</td>
-                  <td scope="row">
+          <tbody clasName="table-primary table-group-divider">
+            {
+              Items.map (item => {
+                return(
+          
+                  <tr className="bg-white">
+                    <td scope="row">
+                      <button 
+                      type="button" 
+                      className="btn btn-link">
+                        <BiBookmark/>
+                      </button>
+                    </td>
+                    <td className="">
+                      <p className=" "> {item.fileName}  
+                      <br /> 
+                      <span className="fw-lighter"> {item.fileDetail} </span></p>
+                    </td>
+                    <td>{item.matchRate}</td>
+                    <td>{item.uploadAt}</td>
+                    <td >{item.updatedAt}</td>
+                    <td scope="row">
+                      <button type="button" class="btn btn-light">
+                        <BiShowAlt/>
+                      </button>
+                    </td>
+                    <td scope="row">
                     <button type="button" class="btn btn-light">
-                      <BiShowAlt/>
-                    </button>
-                  </td>
-                  <td scope="row">
-                  <button type="button" class="btn btn-light">
-                      <BiDotsVerticalRounded/>
-                    </button>
-                  </td>
-                </tr>
-              )
-            })
-          }
-          {/* <tbody clasName="table-primary table-group-divider">
-             
-          </tbody>  */}
+                        <BiDotsVerticalRounded/>
+                      </button>
+                    </td>
+                  </tr>
+                
+                )
+              })
+            }
+          </tbody>  
         </table>
       </div>
      
