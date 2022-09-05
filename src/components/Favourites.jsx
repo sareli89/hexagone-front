@@ -3,7 +3,6 @@ import React from "react";
 import { 
   BiBookmark,
   BiDotsVerticalRounded,
-  BiMoveVertical,
   BiShowAlt
 } from "react-icons/bi";
 
@@ -20,8 +19,8 @@ export default function Favourites () {
       <div className="d-flex justify-content-end mt-3">
         <button 
         type="button" 
-        className="btn btn-info btn-sm gap-2 col-6 mx-auto me-2 text-white fw-bold">
-          NUEVO SEGMENTO
+        className="btn btn-info btn-sm text-uppercase gap-2 col-6 mx-auto me-2 text-white fw-bold">
+          nuevo segmento
         </button>
         <input 
         type="text" 
@@ -36,7 +35,7 @@ export default function Favourites () {
       Favoritos  
     </f4>
     <span className="fs-6 text text-secondary text-opacity-75">Puedes tener un máximo de 3 items en esta lista.</span>
-    <table className="table table-sm container bg-white shadow-sm mb-1 bg-body">
+    <table className="table table-responsive table-sm container bg-white shadow-sm mb-1 bg-body">
           <tbody clasName="table-primary table-group-divider">
             <tr>
               <td scope="row">
