@@ -1,5 +1,10 @@
 import React from "react";
-import { Header } from "./components";
+
+import {
+  Files,
+  Header,
+} from '../src/components/index'
+
 
 
 function App() {
@@ -22,7 +27,7 @@ function App() {
           </div>
 
           <div className="bg-info  h-auto">
-            kldkd
+            <Files/>
           </div>
 
         </div>

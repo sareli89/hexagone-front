@@ -1,5 +1,9 @@
+import Files from "./Files";
+import FileSegment from "./FileSegment";
 import Header from "./Header";
 
 export {
-  Header
+    Files,
+    FileSegment,
+    Header, 
 } 
